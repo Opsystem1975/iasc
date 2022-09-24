@@ -11,8 +11,8 @@ resource "aws_instance" "Reverse-Proxy" {
   tags = {
     Name = "OPSYSTEM"
   }
-  vpc_security_group_ids = [aws_security_group.WebSG.id]
   user_data              = filebase64("${path.module}/scripts/docker.sh")
+  vpc_security_group_ids = [aws_security_group.WebSG.id]
 }
 
 resource "aws_security_group" "WebSG" {
