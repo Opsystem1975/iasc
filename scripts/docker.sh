@@ -30,7 +30,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 # Iniciar Docker junto con el Arranque del Sistema Operativo
 sudo systemctl enable docker
 # Agregar Usuario Actual al Grupo de Docker
-sudo usermod -aG docker "$(whoami)"
+sudo usermod -aG docker ubuntu
 
 echo '============================================='
 echo '=== PASO 4: INSTALACIÓN DE DOCKER-COMPOSE ==='
@@ -46,7 +46,7 @@ sudo systemctl enable docker
 echo '========================================================='
 echo '=== PASO 6: AGREGAR USUARIO ACTUAL AL GRUPO DE DOCKER ==='
 echo '========================================================='
-sudo usermod -aG docker ubuntu "$(whoami)"
+sudo usermod -aG docker ubuntu
 
 echo '========================================='
 echo '=== PASO 7: INSTALAR HERRAMIENTA CTOP ==='
